@@ -1,0 +1,30 @@
+{
+  "name": "prueba_tecnica_simplest",
+  "version": "1.0.0",
+  "description": "El presente repositorio guarda codigo backend para prueba tecnica de simplest-tech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseReyesP/prueba_tecnica_simplest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JoseReyesP/prueba_tecnica_simplest/issues"
+  },
+  "homepage": "https://github.com/JoseReyesP/prueba_tecnica_simplest#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "express-jwt": "^8.5.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2"
+  }
+}
