@@ -6,7 +6,7 @@ const config = {
   server: "localhost",
   database: "prueba_tecnica",
   options: {
-    encrypt: false, // true si usas Azure
+    encrypt: false,
     trustServerCertificate: true,
   },
 };
