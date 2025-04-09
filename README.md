@@ -15,3 +15,7 @@ que ayudara a evaludar los endpoints.
 # Swagger:
 
 El proyecto incluye el servidor Swagger con la documentacion necesaria para entender cada endpoint, para visuarlizarlo debera abrir: http://localhost:3001/api-docs
+
+# Database .bak
+
+Dentro del proyecto encontrara un backup de la base de datos, nombre: prueba_tecnica.bak
