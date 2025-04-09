@@ -73,7 +73,9 @@ router.route("/users/:userId").get(userCtrl.read);
  *       200:
  *         description: Usuario actualizado
  */
-router.route("/users/:userId").put(userCtrl.update);
+router
+  .route("/users/:userId")
+  .put(authCtrl.requireSignin, authCtrl.hasAuthorization, userCtrl.update);
 
 /**
  * @swagger
@@ -91,7 +93,9 @@ router.route("/users/:userId").put(userCtrl.update);
  *       200:
  *         description: Usuario eliminado
  */
-router.route("/users/:userId").delete(userCtrl.remove);
+router
+  .route("/users/:userId")
+  .delete(authCtrl.requireSignin, authCtrl.hasAuthorization, userCtrl.remove);
 
 /**
  * @swagger

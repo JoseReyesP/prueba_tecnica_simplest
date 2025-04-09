@@ -1,3 +1,7 @@
+const express = require("express");
+const authCtrl = require("../controllers/auth.controller.js");
+const router = express.Router();
+
 /**
  * @swagger
  * /auth/signin:
@@ -56,6 +60,7 @@
  *                   type: string
  *                   example: El correo y la contraseña no coinciden
  */
+router.route("/auth/signin").post(authCtrl.signin);
 
 /**
  * @swagger
@@ -76,13 +81,6 @@
  *                   type: string
  *                   example: Sesión cerrada
  */
-
-const express = require("express");
-const authCtrl = require("../controllers/auth.controller.js");
-
-const router = express.Router();
-
-router.route("/auth/signin").post(authCtrl.signin);
 router.route("/auth/signout").get(authCtrl.signout);
 
 module.exports = router;

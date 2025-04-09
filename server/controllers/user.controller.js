@@ -3,7 +3,6 @@ const { poolPromise, sql } = require("../db/sqlserver");
 
 // Crear nuevo usuario
 const create = async (req, res) => {
-  Users;
   try {
     const { name, lastname, email, password } = req.body;
 
