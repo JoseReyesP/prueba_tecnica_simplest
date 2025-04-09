@@ -6,6 +6,8 @@ const compress = require("compression");
 const authRoutes = require("./routes/auth.routes.js");
 const userRoutes = require("./routes/user.routes.js");
 const testRoutes = require("./routes/test.routes.js");
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./docs/swaggerDef.js");
 
 const app = express();
 
@@ -19,6 +21,7 @@ app.use(express.json());
 //Routes
 app.use("/", authRoutes);
 app.use("/", userRoutes);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/api", testRoutes);
 
 module.exports = app;
