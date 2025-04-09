@@ -1,11 +1,8 @@
 const app = require("./express.js");
 const config = require("../config/config.js");
-const mongoose = require("mongoose");
+const { poolPromise } = require("./db/sqlserver");
 
-mongoose.Promise = global.Promise;
-
-mongoose
-  .connect(config.mongoUri)
+poolPromise
   .then(() => {
     app.listen(config.port, (err) => {
       if (err) {
@@ -14,8 +11,7 @@ mongoose
       console.info("Server started on port %s.", config.port);
     });
   })
-
   .catch((err) => {
-    console.error(`Unable to connect to database: ${config.mongoUri}`);
+    console.error("No se pudo conectar a SQL Server");
     console.error(err);
   });

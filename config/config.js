@@ -10,4 +10,4 @@ const config = {
   mongoUri: DBUrl,
 };
 
-export default config;
+module.exports = config;
