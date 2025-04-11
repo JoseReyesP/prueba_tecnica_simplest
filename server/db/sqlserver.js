@@ -4,6 +4,7 @@ const config = {
   user: "sa",
   password: "1095#reyes",
   server: "localhost",
+  port:1433,
   database: "prueba_tecnica",
   options: {
     encrypt: false,

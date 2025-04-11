@@ -8,6 +8,7 @@ const userRoutes = require("./routes/user.routes.js");
 const testRoutes = require("./routes/test.routes.js");
 const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./docs/swaggerDef.js");
+const logger = require("./middleware/logger.js");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(cookieParser()); // Permite acceder a las cookies enviadas por el client
 app.use(helmet()); // Middleware que ayuda a proteger la app configurando cabeceras HTTP seguras
 app.use(compress()); // Usa compresión gzip para reducir el tamaño de las respuestas y acelerar la carga en el cliente
 app.use(express.json());
+app.use(logger);
 //Routes
 app.use("/", authRoutes);
 app.use("/", userRoutes);
